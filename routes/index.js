@@ -1,5 +1,5 @@
-const express = require("express");
-const router = express.Router();
+import express from 'express'
+const router = express.Router()
 // const message_controller = require("../controllers/messageController");
 
 router.get("/", (req, res) => {
@@ -11,4 +11,4 @@ router.get("/new", (req, res) => {
 });
 
 
-module.exports = router;
+export default router

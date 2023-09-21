@@ -1,4 +1,4 @@
-const { default: mongoose } = require('mongoose');
+import { mongoose } from 'mongoose';
 
 const Schema = mongoose.Schema
 
@@ -9,4 +9,4 @@ CategorySchema.virtual('url').get(function() {
     return `/catalog/genre/${this.id}`
 })
 
-module.exports = mongoose.model("Category", CategorySchema)
+export default mongoose.model("Category", CategorySchema)
