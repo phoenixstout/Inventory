@@ -1,10 +1,9 @@
 import express from 'express'
+import guitarController from '../controllers/guitarController.js'
 const router = express.Router()
-// const message_controller = require("../controllers/messageController");
 
-router.get("/", (req, res) => {
-    res.send('hi')
-});
+
+router.get("/", guitarController);
 
 router.get("/new", (req, res) => {
   res.send("form");
