@@ -4,10 +4,19 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Inventory
+        style
+            include ./stylesheets/index.css
+        
     body 
-        h1 Inventory
+        .header-wrapper
+            h1 Inventory
+            a(href='/new') 
+                button Add Guitar
+            a(href='/new')
+                button Add Category
         .wrapper 
             each item in items
-                div=item.name
-            each item in categories 
-                div=item.name
+                a(href=item.url) 
+                    .item-wrapper 
+                        .name= item.name 
+                        div= item.description

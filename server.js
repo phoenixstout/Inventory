@@ -11,6 +11,7 @@ const app = express();
 main().catch((err) => console.log(err));
 async function main() {
   await mongoose.connect(process.env.url);
+
   console.log("connected");
 }
 

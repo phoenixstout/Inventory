@@ -8,8 +8,15 @@ const index = asyncHandler(async (req, res, next) => {
     Guitar.find().exec(),
     Category.find().exec()
  ])
- console.log(categories)
  res.render('index', {items:guitars, categories:categories})
 });
 
-export default index;
+const guitar_detail = asyncHandler(async (req, res) => {
+    const id = req.params.id
+    const guitar = await Guitar.findById(id).exec()
+    res.render('guitarDetail', {guitar:guitar})
+})
+
+
+
+export default {index, guitar_detail};
