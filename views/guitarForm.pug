@@ -1,0 +1,12 @@
+extends index 
+
+block newForm 
+    form(action="/newguitar", method="post") 
+        input(type="text" placeholder="name" name="name")
+        input(type="text" placeholder="description" name="description")
+        input(type="text", placeholder="price", name="price")
+        input(type="text", placeholder="num in stock", name="num_in_stock")
+        select(name="category")
+            each category in categories
+                option(value=category._id)=category.name
+        button Submit

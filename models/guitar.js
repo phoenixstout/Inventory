@@ -11,7 +11,7 @@ const GuitarSchema = new Schema({
 });
 
 GuitarSchema.virtual('url').get(function() {
-    return `/catalog/guitar/${this.id}`
+    return `/guitar/${this.id}`
 })
 
 export default model('Guitar', GuitarSchema)

@@ -10,13 +10,15 @@ html(lang="en")
     body 
         .header-wrapper
             h1 Inventory
-            a(href='/new') 
+            a(href='/newguitar') 
                 button Add Guitar
-            a(href='/new')
-                button Add Category
+            a(href='/newcategory')
+                button Add Category 
+        block newForm
         .wrapper 
-            each item in items
-                a(href=item.url) 
+            each guitar in guitars
+                a(href=guitar.url) 
                     .item-wrapper 
-                        .name= item.name 
-                        div= item.description
+                        .name= guitar.name 
+                        div= guitar.description
+                        div= '$'+guitar.price

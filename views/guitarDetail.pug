@@ -6,3 +6,8 @@ html(lang="en")
         title Document
     body 
         div=guitar.name
+        div=guitar.description
+        form(action=`/updateguitar/${guitar.id}`, method="post") 
+            input(type="number" value=guitar.num_in_stock name='num_in_stock')
+            button Update
+        a(href="/") Home

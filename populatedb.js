@@ -58,9 +58,9 @@ async function guitarCreate(index, name, description, category, price, num_in_st
 async function createGuitars() {
   console.log("Adding guitars");
   await Promise.all([
-    guitarCreate(0, "Baby", 'best guitar', categories[0]),
-    guitarCreate(1, "Jazz", 'worst guitar', categories[1]),
-    guitarCreate(2, "FG200", 'slightly good', categories[2]),
+    guitarCreate(0, "Baby", 'best guitar', categories[0], 300, 10),
+    guitarCreate(1, "Jazz", 'worst guitar', categories[1], 1000, 5),
+    guitarCreate(2, "FG200", 'slightly good', categories[2], 200, 3),
   ]);
 }
 
